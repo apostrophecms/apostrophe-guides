@@ -1,0 +1,19 @@
+{% import 'apostrophe-guides:macros/example.html' as example %}
+
+{% macro render(options) %}
+<section class="apos-guide-section">
+  <div id="{{ apos.utils.slugify(options.name) }}-section" class="apos-guide-docs {{ apos.utils.slugify(options.name) }}-section">
+
+    <div class="apos-guide-section-content">
+      {{ options.doc | safe }}
+
+      {% if options.template == 'components' %}
+        {% for demo in options.demos %}
+          {{ example.render({ demo: demo }) }}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+{% endmacro %}

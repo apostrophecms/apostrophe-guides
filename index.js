@@ -1,14 +1,18 @@
+const path = require("path");
+
 module.exports = {
-  moogBundle: {
-    directory: 'lib/modules',
-    modules: [
-      'apostrophe-'
-    ]
-  },
+  name: "apostrophe-guides",
+  alias: "guides",
+  label: "Guide",
+  extend: "apostrophe-module",
 
-  afterConstruct: function(self) {},
-  beforeConstruct: function(self, options) {},
-  construct: function(self, options) {
+  construct: (self, options) => {
+    require("./lib/guide")(self, options);
+    self.addRoutes();
 
+    self.apos.app.use(
+      "/modules/guide/images",
+      self.apos.express.static(path.join(__dirname, "images"))
+    );
   }
-}
+};

@@ -1,0 +1,16 @@
+{% macro render(data) %}
+<nav class="apos-guide-navigation">
+  <ul class="apos-guide-navigation-list">
+  {% for section in data %}
+    <li class="apos-guide-section-list">
+      <span class="apos-guide-section-name">{{ apos.utils.startCase(section.name) }}</span>
+      <ul class="apos-guide-section-navigation">
+      {% for item in section.docs %}
+        <li class="apos-guide-section-item"><a href="{{ item.url }}" class="apos-guide-link {{ 'apos-guide-is-active' if item.active }}">{{ apos.utils.startCase(item.name) }}</a></li>
+      {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+  </ul>
+</nav>
+{% endmacro %}

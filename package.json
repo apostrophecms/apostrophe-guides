@@ -1,13 +1,13 @@
 {
-  "name": "apostrophe-",
+  "name": "apostrophe-guides",
   "version": "1.0.0",
-  "description": "",
+  "description": "Build Guides for your ApostropheCMS website",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha"
   },
   "keywords": [
     "apostrophecms",
@@ -15,21 +15,26 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apostrophecms/apostrophe-"
+    "url": "git+https://github.com/apostrophecms/apostrophe-guides"
   },
   "author": "Apostrophe Technologies",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.2.0",
-    "eslint-config-punkave": "^1.0.8",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.1.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "stylelint": "^9.10.1",
-    "stylelint-config-punkave": "0.0.9",
-    "stylelint-order": "^2.2.1"
+    "eslint": "^6.8.0",
+    "eslint-config-apostrophe": "^3.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mocha": "^7.2.0",
+    "sinon": "^9.0.2",
+    "stylelint": "^13.5.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "dependencies": {
+    "glob": "^7.1.6",
+    "marked": "^1.1.0",
+    "normalize.css": "^8.0.1"
   }
 }

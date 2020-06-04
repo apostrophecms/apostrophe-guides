@@ -1,0 +1,36 @@
+{% extends data.outerLayout %}
+
+{% import 'apostrophe-guides:macros/section.html' as section %}
+{% import 'apostrophe-guides:macros/navigation.html' as navigation %}
+
+{% set guide = data.guide %}
+
+{% block title %}{{ guide.title }}{% endblock %}
+
+{% block extraHead %}
+  <!-- <link href="/css/site.css" rel="stylesheet"> -->
+{% endblock %}
+
+{% block beforeMain %}
+<div class="apos-guide {{ guide.baseCSSClass }}"> <!-- The baseCSSClass shouldn't be applied here -->
+  <header class="apos-guide-header">
+    <span class="apos-guide-heading"><span class="apos-guide-name">{{ guide.title }}</span></span>
+  </header>
+  <main class="apos-guide-main">
+  {{ navigation.render(guide.sections) }}
+{% endblock %}
+
+{% block main %}
+<div class="apos-guide-content">
+  {{ section.render(guide.page) }}
+</div>
+{% endblock %}
+
+{% block afterMain %}
+  </main>
+</div>
+{% endblock %}
+
+{% block extraBody %}
+  <!-- <script src="/js/site.js"></script> -->
+{% endblock %}
