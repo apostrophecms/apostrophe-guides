@@ -4,7 +4,7 @@ const assert = require("assert");
 const utils = require("../lib/utils");
 
 describe("apostrophe-guides:utils", function() {
-  it("should stringify", function(done) {
+  it("should stringify with formatting", function(done) {
     const obj = { foo: "bar" };
 
     const expected = `{
@@ -26,6 +26,47 @@ describe("apostrophe-guides:utils", function() {
 
     assert(spy.calledWith(expected));
     spy.restore();
+    done();
+  });
+
+  it("should render markdown", function(done) {
+    const expected = '<h1 id="title">Title</h1>\n';
+
+    const md = "# Title";
+    const actual = utils.renderDoc(md);
+
+    assert.equal(expected, actual);
+    done();
+  });
+
+  it("should set a section to active", function(done) {
+    const sections = [
+      {
+        name: "Section",
+        docs: [{ name: "Page One" }, { name: "Page Two" }]
+      }
+    ];
+
+    const page = { name: "Page One" };
+
+    const expected = [
+      {
+        name: "Section",
+        docs: [
+          {
+            name: "Page One",
+            active: true
+          },
+          {
+            name: "Page Two"
+          }
+        ]
+      }
+    ];
+
+    const actual = utils.setActive(sections, page);
+
+    assert.deepEqual(expected, actual);
     done();
   });
 });
