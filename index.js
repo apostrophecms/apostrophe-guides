@@ -8,11 +8,14 @@ module.exports = {
 
   construct: (self, options) => {
     require("./lib/guide")(self, options);
-    self.addRoutes();
+
+    self.pushAsset("stylesheet", "always", { when: "always" });
 
     self.apos.app.use(
-      "/modules/guide/images",
+      "/guide/images",
       self.apos.express.static(path.join(__dirname, "images"))
     );
+
+    self.addRoutes();
   }
 };
