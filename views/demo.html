@@ -1,0 +1,18 @@
+{% set demo = data.demo %}
+
+<html>
+    <head>
+        {% for stylesheet in demo.stylesheets %}
+            <link href="{{ stylesheet }}" rel="stylesheet">
+        {% endfor %}
+    </head>
+    <body class="{{ demo.baseCSSClass }}">
+        {% block apostropheMenu %}{% endblock %}
+        {% block content %}
+
+        {% endblock %}
+        {% for script in demo.scripts %}
+            <script src="{{ script }}"></script>
+        {% endfor %}
+    </body>
+</html>

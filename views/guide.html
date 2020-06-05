@@ -7,12 +7,8 @@
 
 {% block title %}{{ guide.title }}{% endblock %}
 
-{% block extraHead %}
-  <!-- <link href="/css/site.css" rel="stylesheet"> -->
-{% endblock %}
-
 {% block beforeMain %}
-<div class="apos-guide {{ guide.baseCSSClass }}"> <!-- The baseCSSClass shouldn't be applied here -->
+<div class="apos-guide">
   <header class="apos-guide-header">
     <span class="apos-guide-heading"><span class="apos-guide-name">{{ guide.title }}</span></span>
   </header>
@@ -29,8 +25,4 @@
 {% block afterMain %}
   </main>
 </div>
-{% endblock %}
-
-{% block extraBody %}
-  <!-- <script src="/js/site.js"></script> -->
 {% endblock %}
