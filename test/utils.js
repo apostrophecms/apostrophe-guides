@@ -58,7 +58,8 @@ describe("apostrophe-guides:utils", function() {
             active: true
           },
           {
-            name: "Page Two"
+            name: "Page Two",
+            active: false
           }
         ]
       }
