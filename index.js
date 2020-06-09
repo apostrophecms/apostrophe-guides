@@ -2,20 +2,28 @@ const path = require("path");
 
 module.exports = {
   name: "apostrophe-guides",
-  alias: "guides",
   label: "Guide",
   extend: "apostrophe-module",
 
+  afterConstruct: self => {
+    self.addRoutes();
+    self.apos.on("csrfExceptions", self.addCsrfException);
+  },
+
   construct: (self, options) => {
+    self.addCsrfException = exceptions => {
+      exceptions.push(`/${options.path}/**`);
+    };
+
     require("./lib/guide")(self, options);
 
     self.pushAsset("stylesheet", "always", { when: "always" });
 
     self.apos.app.use(
       "/guide/images",
-      self.apos.express.static(path.join(__dirname, "images"))
+      self.apos.express.static(path.join(__dirname, "public", "images"))
     );
 
-    self.addRoutes();
+    require("./lib/search")(self, options);
   }
 };

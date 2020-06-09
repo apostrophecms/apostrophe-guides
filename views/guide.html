@@ -10,7 +10,11 @@
 {% block beforeMain %}
 <div class="apos-guide">
   <header class="apos-guide-header">
-    <span class="apos-guide-heading"><span class="apos-guide-name">{{ guide.title }}</span></span>
+    <a href="/{{ guide.path }}" class="apos-guide-heading"><span class="apos-guide-name">{{ guide.title }}</span></a>
+    <form class="apos-guide-search-form" action="/{{ guide.path }}/search" method="post">
+        <label for="query" class="apos-guide-search-label">{{ __("Search") }} {{ guide.title }}</label>
+        <input id="query" name="query" class="apos-guide-search-input" type="text" placeholder="{{ __('Search') }} {{ guide.title }}">
+    </form>
   </header>
   <main class="apos-guide-main">
   {{ navigation.render(guide.sections) }}
@@ -18,7 +22,7 @@
 
 {% block main %}
 <div class="apos-guide-content">
-  {{ section.render(guide.page) }}
+  {% block content %}{{ section.render(guide.page) }}{% endblock %}
 </div>
 {% endblock %}
 

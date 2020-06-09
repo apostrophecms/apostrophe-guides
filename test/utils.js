@@ -17,6 +17,16 @@ describe("apostrophe-guides:utils", function() {
     done();
   });
 
+  it("should highlight a term", function(done) {
+    const str = "Hello World";
+
+    const expected = `<span class="apos-text-highlight">Hell</span>o World`;
+    const actual = utils.highlight([[0, 3]], str);
+
+    assert.equal(expected, actual);
+    done();
+  });
+
   it("should log an error", function(done) {
     const spy = sinon.spy(console, "error");
 

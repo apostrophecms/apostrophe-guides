@@ -19,6 +19,9 @@
   },
   "author": "Apostrophe Technologies",
   "license": "MIT",
+  "peerDependencies": {
+    "apostrophe": "^2.103.1"
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-apostrophe": "^3.1.0",
@@ -34,8 +37,11 @@
     "stylelint-order": "^4.1.0"
   },
   "dependencies": {
+    "fuse.js": "^6.0.4",
     "glob": "^7.1.6",
-    "marked": "^1.1.0"
+    "lodash": "^4.17.15",
+    "marked": "^1.1.0",
+    "sanitize-html": "^1.26.0"
   },
   "nyc": {
     "include": [

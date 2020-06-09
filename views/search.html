@@ -1,0 +1,29 @@
+{% extends "apostrophe-guides:guide.html" %}
+
+{% set results = data.results %}
+
+{% block main %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+<section class="apos-guide-section">
+  <div class="apos-guide-docs apos-guide-search-results">
+    <div class="apos-guide-section-content">
+    
+        {% if data.totalResults %}
+            <h1 class="apos-guide-search-title">{{ __("About") }} {{ data.totalResults }} {{ __("Results in") if data.totalResults > 1 else __("Result in") }} {{ data.totalDocuments }} {{ __("Documents for") if data.totalDocuments > 1 else __("Document for") }} <span class="apos-guide-search-query">{{ data.query }}</span></h1>
+            {% for result in results %}
+                <div class="apos-guide-search-result">
+                    <h2 class="apos-guide-search-result-title"><a class="apos-guide-search-result-link" href="{{ result.url }}">{{ result.name | safe }}</a></h2>
+                    <div class="apos-guide-search-result-excerpt">{{ result.doc | safe }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1>{{__("Sorry, no results found for") }} {{ data.query }}</h1>
+        {% endif %}
+
+        </div>
+    </div>
+</section>
+{% endblock %}
