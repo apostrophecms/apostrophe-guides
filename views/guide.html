@@ -13,7 +13,7 @@
     <a href="/{{ guide.path }}" class="apos-guide-heading"><span class="apos-guide-name">{{ guide.title }}</span></a>
     <form class="apos-guide-search-form" action="/{{ guide.path }}/search" method="post">
         <label for="query" class="apos-guide-search-label">{{ __("Search") }} {{ guide.title }}</label>
-        <input id="query" name="query" class="apos-guide-search-input" type="text" placeholder="{{ __('Search') }} {{ guide.title }}">
+        <input id="query" name="query" class="apos-guide-search-input" type="text" value="{{ data.query.term or '' }}" placeholder="{{ __('Search') }} {{ guide.title }}">
     </form>
   </header>
   <main class="apos-guide-main">

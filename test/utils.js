@@ -21,7 +21,7 @@ describe("apostrophe-guides:utils", function() {
     const str = "Hello World";
 
     const expected = `<span class="apos-text-highlight">Hell</span>o World`;
-    const actual = utils.highlight([[0, 3]], str);
+    const actual = utils.highlight([[0, 3]], str, 4);
 
     assert.equal(expected, actual);
     done();
