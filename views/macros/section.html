@@ -11,11 +11,9 @@
     <div class="apos-guide-section-content">
       {{ options.doc | safe }}
 
-      {% if options.template == 'components' %}
-        {% for demo in options.demos %}
-          {{ example.render({ demo: demo }) }}
-        {% endfor %}
-      {% endif %}
+      {% for demo in options.demos %}
+        {{ example.render({ demo: demo }) }}
+      {% endfor %}
     </div>
 
     {% if footerTemplate %}
