@@ -1,6 +1,10 @@
 {% import 'apostrophe-guides:macros/example.html' as example %}
 
 {% macro render(options) %}
+
+{% set footer = options.footer %}
+{% set footerTemplate = options.footerTemplate %}
+
 <section class="apos-guide-section">
   <div id="{{ apos.utils.slugify(options.name) }}-section" class="apos-guide-docs {{ apos.utils.slugify(options.name) }}-section">
 
@@ -13,6 +17,12 @@
         {% endfor %}
       {% endif %}
     </div>
+
+    {% if footerTemplate %}
+      {% include footerTemplate %}
+    {% elseif footer %}
+      <footer class="apos-guide-section-footer">{{ footer | safe }}</footer>
+    {% endif %}
 
   </div>
 </section>
