@@ -37,6 +37,7 @@
     "stylelint-order": "^4.1.0"
   },
   "dependencies": {
+    "color-convert": "^2.0.1",
     "fuse.js": "^6.0.4",
     "glob": "^7.1.6",
     "lodash": "^4.17.15",

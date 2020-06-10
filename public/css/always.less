@@ -266,6 +266,10 @@ body {
         text-decoration: underline;
       }
     }
+
+    .apos-guide-swatch-name {
+      margin-bottom: 0;
+    }
   }
 
   &-search-results {
@@ -321,5 +325,32 @@ body {
     display: block;
     height: 100%;
     width: 100%;
+  }
+
+  &-swatch {
+    display: inline-block;
+    width: calc(100% / 3 - 8px);
+    margin-right: 5px;
+    margin-bottom: 20px;
+  }
+
+  &-swatch-color {
+    height: 160px;
+  }
+
+  &-swatch-meta {
+    padding: 20px;
+    background-color: @white-smoke;
+  }
+
+  &-swatch-name {
+    font-weight: 600;
+  }
+
+  &-swatch-hex,
+  &-swatch-rgb {
+    display: block;
+    font-family: monospace;
+    color: #aaa;
   }
 }
