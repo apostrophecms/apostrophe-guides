@@ -39,16 +39,6 @@ describe("apostrophe-guides:utils", function() {
     done();
   });
 
-  it("should render markdown", function(done) {
-    const expected = '<h1 id="title">Title</h1>\n';
-
-    const md = "# Title";
-    const actual = utils.renderDoc(md);
-
-    assert.equal(expected, actual);
-    done();
-  });
-
   it("should set a section to active", function(done) {
     const sections = [
       {

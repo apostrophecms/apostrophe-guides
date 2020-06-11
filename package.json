@@ -40,6 +40,7 @@
     "color-convert": "^2.0.1",
     "fuse.js": "^6.0.4",
     "glob": "^7.1.6",
+    "highlight.js": "^10.0.3",
     "lodash": "^4.17.15",
     "marked": "^1.1.0",
     "sanitize-html": "^1.26.0"
