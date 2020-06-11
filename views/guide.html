@@ -8,14 +8,8 @@
 {% block title %}{{ guide.title }}{% endblock %}
 
 {% block beforeMain %}
-<div class="apos-guide">
-  <header class="apos-guide-header">
-    <a href="/{{ guide.path }}" class="apos-guide-title"><span class="apos-guide-name">{{ guide.title }}</span></a>
-    <form class="apos-guide-search-form" action="/{{ guide.path }}/search" method="post">
-        <label for="query" class="apos-guide-search-label">{{ __("Search") }} {{ guide.title }}</label>
-        <input id="query" name="query" class="apos-guide-search-input" type="text" value="{{ data.query.term or '' }}" placeholder="{{ __('Search') }} {{ guide.title }}">
-    </form>
-  </header>
+<div class="apos-guide apos-guide-{{ apos.utils.slugify(guide.title) }}">
+  {% include 'header.html' %}
   <main class="apos-guide-main">
   {{ navigation.render(guide.sections) }}
 {% endblock %}
