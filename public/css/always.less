@@ -71,7 +71,9 @@ body {
     text-decoration: none;
   }
 
-  &-name {
+  &-name,
+  &-search-query,
+  &-swatch-name {
     font-weight: 600;
   }
 
@@ -102,13 +104,20 @@ body {
     margin-bottom: 25px;
   }
 
+  &-section-name,
+  &-swatch-hex,
+  &-swatch-rgb,
+  &-font-name,
+  &-icon-name {
+    color: #aaa;
+  }
+
   &-section-name {
     display: block;
     padding: 5px 25px;
     margin-bottom: 5px;
     font-size: 0.75rem;
     text-transform: uppercase;
-    color: #aaa;
     letter-spacing: 0.75px;
   }
 
@@ -312,7 +321,6 @@ body {
   &-search-query {
     display: block;
     font-size: 2rem;
-    font-weight: 600;
   }
 
   &-demo {
@@ -328,11 +336,15 @@ body {
     width: 100%;
   }
 
-  &-swatch {
+  &-swatch,
+  &-icon {
     display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &-swatch {
     width: calc(100% / 3 - 8px);
     margin-right: 5px;
-    margin-bottom: 20px;
   }
 
   &-swatch-color {
@@ -344,15 +356,15 @@ body {
     background-color: @white-smoke;
   }
 
-  &-swatch-name {
-    font-weight: 600;
+  &-swatch-hex,
+  &-swatch-rgb,
+  &-icon-name {
+    font-family: monospace;
   }
 
   &-swatch-hex,
   &-swatch-rgb {
     display: block;
-    font-family: monospace;
-    color: #aaa;
   }
 
   &-font-example {
@@ -362,6 +374,17 @@ body {
 
   &-font-name {
     margin-right: 20px;
-    color: #aaa;
+  }
+
+  &-icon {
+    display: inline-block;
+    width: calc(100% / 5 - 5px);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &-icon-image {
+    height: 64px;
+    width: auto;
   }
 }
