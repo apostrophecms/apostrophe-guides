@@ -118,7 +118,7 @@ As a template:
 ```
 'apostrophe-guides': {
     ...
-    footer: "components:includes/guideFooter.html"
+    footer: "apostrophe-guides:guideFooter.html"
 }
 
 ```
