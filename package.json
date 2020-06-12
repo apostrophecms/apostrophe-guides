@@ -1,7 +1,7 @@
 {
   "name": "apostrophe-guides",
   "version": "1.0.0",
-  "description": "Build Guides for your ApostropheCMS website",
+  "description": "Build guides to document your Apostrophe site.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
