@@ -27,6 +27,20 @@ describe("apostrophe-guides:utils", function() {
     done();
   });
 
+  it("should return an object of attributes", function(done) {
+    const attrs = ['foo="bar"', 'baz="qux"'];
+
+    const expected = {
+      foo: "bar",
+      baz: "qux"
+    };
+
+    const actual = utils.addAttr(attrs);
+
+    assert.deepEqual(expected, actual);
+    done();
+  });
+
   it("should log an error", function(done) {
     const spy = sinon.spy(console, "error");
 
