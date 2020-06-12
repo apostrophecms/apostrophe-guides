@@ -208,14 +208,14 @@ An example icon:
 
 To document your components, you can use a slightly modified version of the `code` block.
 
-```md 
+````md 
 
-  ```html button-simple.html
-  {% import "components:button/button.html" as button %}
-  {{ button.render({ text: 'Click' }) }}
-  ```
-
+```html button-simple.html
+{% import "components:button/button.html" as button %}
+{{ button.render({ text: 'Click' }) }}
 ```
+
+````
 
 This should be identical to how you'd use your component in your templates. This could be `macro`, an `include`, or just plain old static html. The filename specified after the language will tell the module to generate a small html file that we can render inside an iframe on your documentation page. The iframe includes the `stylesheets`, `scripts`, and `baseCSSClass` you specified in the modules options. This is done to essentially sandbox your demo so that no guide styles or scripts pollute your example. 
 
