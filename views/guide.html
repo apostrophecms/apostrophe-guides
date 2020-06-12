@@ -1,7 +1,7 @@
 {% extends data.outerLayout %}
 
-{% import 'apostrophe-guides:macros/section.html' as section %}
-{% import 'apostrophe-guides:macros/navigation.html' as navigation %}
+{% import 'macros/section.html' as section %}
+{% import 'macros/navigation.html' as navigation %}
 
 {% set guide = data.guide %}
 
@@ -16,7 +16,7 @@
 
 {% block main %}
 <div class="apos-guide-content">
-  {% block content %}{{ section.render(guide.page) }}{% endblock %}
+  {{ section.render(guide.page) }}
 </div>
 {% endblock %}
 
