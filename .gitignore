@@ -8,3 +8,7 @@ coverage
 
 # A special folder for generated demo html macros
 views/demos
+
+test/data
+test/locales
+test/public
