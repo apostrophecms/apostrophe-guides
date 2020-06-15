@@ -3,7 +3,6 @@ const assert = require("assert");
 const utils = require("../lib/markdown");
 
 describe("apostrophe-guides:markdown", function() {
-
   it("should render markdown", function(done) {
     const expected = `<h1 id="title" class="apos-guide-heading">
   <a class="apos-guide-heading-link" href="#title">Title</a>
@@ -15,5 +14,4 @@ describe("apostrophe-guides:markdown", function() {
     assert.equal(expected, actual);
     done();
   });
-
 });

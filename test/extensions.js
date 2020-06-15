@@ -1,6 +1,6 @@
 const assert = require("assert");
 
-const extensions = require('../lib/extensions');
+const extensions = require("../lib/extensions");
 
 describe("apostrophe-guides:extensions", function() {
   it("should convert a font tag to html", function(done) {
@@ -85,5 +85,4 @@ describe("apostrophe-guides:extensions", function() {
     assert.equal(expected, actual);
     done();
   });
-
 });
