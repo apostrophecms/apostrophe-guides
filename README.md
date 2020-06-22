@@ -132,17 +132,10 @@ All documentation is written in Markdown with some added bonuses. Check [Markdow
 Use the standard Markdown syntax to add an image to your page.
 
 ```
-![My Image](images/demo.png)
+![My Image](/guides/demo.png)
 ```
 
-Just be sure your images are placed in a directory that is reachable by Apostrophe -- ie. either a module's `public` folder or a directory you've told Apostrophe about via `self.apos.app.use`.
-
-```js
-self.apos.app.use(
-  '/guide/images',
-  self.apos.express.static(path.join(__dirname, 'images'))
-)
-```
+With the above example, your images would be placed in the `/public/guides` folder of your project.
 
 ### Documenting Assets
 
