@@ -6,12 +6,12 @@
 1. [Getting Started](#getting-started)
 1. [Options](#options)
 1. [Writing Documentation](#writing-documentation)
-  1. [Adding Images](#adding-images)
-  1. [Documenting Assets](#documenting-assets)
-  1. [Colors](#colors)
-  1. [Fonts](#fonts)
-  1. [Icons](#icons)
-  1. [Components](#components)
+1. [Adding Images](#adding-images)
+1. [Documenting Assets](#documenting-assets)
+1. [Colors](#colors)
+1. [Fonts](#fonts)
+1. [Icons](#icons)
+1. [Components](#components)
 1. [Customizing your Guide](#customizing-your-guide)
 
 ![Apostrophe Guides Example](images/guides.png)
@@ -20,7 +20,7 @@
 
 So, why would you use this? Maybe you're developing an Apostrophe site and you want to provide documentation for other developers. Maybe you want to document your Design System to better collaborate with your team. Maybe you want to create a User Guide so editors have a reference on how to use the site. Maybe you want to do all three.
 
-This module allows you to write your documentation in static Markdown and serves them right alongside your Apostrophe site. And because this is an Apostrophe module, you can document your components same way you'd use them in you templates and they'll automatically be kept up to date with your living code. 
+This module allows you to write your documentation in static Markdown and serves them right alongside your Apostrophe site. And because this is an Apostrophe module, you can document your components same way you'd use them in you templates and they'll automatically be kept up to date with your living code.
 
 Create one guide or individual guides for each of your audiences. It's up to you.
 
@@ -169,7 +169,7 @@ An example font:
 
 ![Apostrophe Guides Font](images/font.png)
 
-*Note:* In order to preview custom fonts, you might need to add a link to your font definition.
+_Note:_ In order to preview custom fonts, you might need to add a link to your font definition.
 
 Ex:
 
@@ -196,18 +196,15 @@ An example icon:
 
 ![Apostrophe Guides Icon](images/icon.png)
 
-
 #### Components
 
 To document your components, you can use a slightly modified version of the `code` block.
 
-````md 
-
+````md
 ```html button-simple.html
 {% import "components:button/button.html" as button %}
 {{ button.render({ text: 'Click' }) }}
 ```
-
 ````
 
 This should be identical to how you'd use your component in your templates. This could be `macro`, an `include`, or just plain old static html. The filename specified after the language will tell the module to generate a small html file that we can render inside an iframe on your documentation page. The iframe includes the `stylesheets`, `scripts`, and `demoBodyClass` you specified in the modules options. This is done to essentially sandbox your demo so that no guide styles or scripts pollute your example.
@@ -216,14 +213,12 @@ An example component:
 
 ![Apostrophe Guides Component](images/component.png)
 
-*Note:* Demos are rendered at the end of your documentation page by default. This is currently not configurable.
+_Note:_ Demos are rendered at the end of your documentation page by default. This is currently not configurable.
 
 ## Customizing Your Guide
 
-This module follows the standard Apostophe modular system so that means **everything** can be customized to your needs. If you're ok with the layout just want to maybe whitelabel it a little bit the styles can be overwritten by a local css file in your modules `public/css` directory. A custom class is also applied to the guide based on the `title` option. This allows you to have multiple guides with multiple themes. 
+This module follows the standard Apostophe modular system so that means **everything** can be customized to your needs. If you're ok with the layout just want to maybe brand your guide the styles can be overwritten by a local css file in your module's `public/css` directory. A custom class is also applied to the guide based on the `title` option. This allows you to have multiple guides with multiple themes.
 
 Additionally, you can modify any template by making a local copy of the template located in `node_modules/apostrophe-guides/views`.
 
 Happy documenting!
-
- 
