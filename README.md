@@ -79,11 +79,11 @@ Example:
 
 The URL of your guide. If your site is running on `http://localhost:3000`, by default your guide will be available on `http://localhost:3000/guide`. If you set this option set to `styleguide`, your guide would be `http://localhost:3000/styleguide`.
 
-### baseCSSClass
+### demoBodyClass
 
 - Required: `N`
 
-If you are creating a style guide, this will add your specified class to the `body` element of `iframe`-d demo sandbox. More on those [later](#components).
+If you are including demos of your components in your guide and are using a css body class to scope your styles, this will add the specified class to the `body` element of `iframe`-d demo sandbox. More on those [later](#components).
 
 ### stylesheets
 
@@ -217,7 +217,7 @@ To document your components, you can use a slightly modified version of the `cod
 
 ````
 
-This should be identical to how you'd use your component in your templates. This could be `macro`, an `include`, or just plain old static html. The filename specified after the language will tell the module to generate a small html file that we can render inside an iframe on your documentation page. The iframe includes the `stylesheets`, `scripts`, and `baseCSSClass` you specified in the modules options. This is done to essentially sandbox your demo so that no guide styles or scripts pollute your example. 
+This should be identical to how you'd use your component in your templates. This could be `macro`, an `include`, or just plain old static html. The filename specified after the language will tell the module to generate a small html file that we can render inside an iframe on your documentation page. The iframe includes the `stylesheets`, `scripts`, and `demoBodyClass` you specified in the modules options. This is done to essentially sandbox your demo so that no guide styles or scripts pollute your example.
 
 An example component:
 
