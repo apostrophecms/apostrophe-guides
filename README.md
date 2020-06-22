@@ -77,7 +77,7 @@ Example:
 - Required: `N`
 - Default: `guide`
 
-The URL where you guide will live.
+The URL of your guide. If your site is running on `http://localhost:3000`, by default your guide will be available on `http://localhost:3000/guide`. If you set this option set to `styleguide`, your guide would be `http://localhost:3000/styleguide`.
 
 ### baseCSSClass
 
