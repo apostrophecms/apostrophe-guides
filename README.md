@@ -27,7 +27,7 @@ Create one guide or individual guides for each of your audiences. It's up to you
 ## Getting Started
 
 ```sh
-npm install --save apostrophe-guides
+npm install apostrophe-guides
 ```
 
 After the module has installed, enable it in your `app.js`;
