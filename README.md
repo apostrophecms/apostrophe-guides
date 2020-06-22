@@ -66,7 +66,7 @@ Example:
         },
         {
             name: "Components",
-            docs: ["lib/modules/components/views/**/*"] // A glob
+            docs: ["lib/modules/components/views/**/*.md"] // A glob
         }
     ]
 }
