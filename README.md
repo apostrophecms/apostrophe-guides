@@ -223,4 +223,6 @@ This module follows the standard Apostrophe modular system so that means **every
 
 Additionally, you can modify any of the guide templates by coping the template you wish to modify from `node_modules/apostrophe-guides/views` to your project's `lib/modules/apostrophe-guides/views` directory.
 
+Just note that you only need to copy the files you wish to modify to your local `apostrophe-guides` directory. You do not need to copy them all.
+
 Happy documenting!
