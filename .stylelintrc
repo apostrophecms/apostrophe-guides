@@ -1,24 +1,93 @@
 {
-  "extends": "stylelint-config-standard",
-  "ignoreFiles": ['node_modules/**/*'],
-  "rules": {
-    "selector-type-no-unknown": null,
-    "selector-list-comma-newline-after": null,
-    "selector-pseudo-element-colon-notation": "single",
-    "declaration-empty-line-before": [null, ignore: ["after-comment", "inside-single-line-block"]],
-    "declaration-block-single-line-max-declarations": 2,
-    "color-hex-case": "lower",
-    "no-eol-whitespace": [null, ignore: ["empty-lines"]],
-    "no-descending-specificity": null,
-    "rule-empty-line-before": ["always", ignore: ["inside-block"]],
-    "no-missing-end-of-source-newline": true,
-    "no-empty-source": true,
-    "at-rule-empty-line-before": ["always", {
-      "except": ["after-same-name"],
-      "ignore": ["after-comment", "inside-block"]
-    }],
-    "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["mixin", "include"]
-    }]
+  'plugins': [
+    'stylelint-order',
+    'stylelint-declaration-strict-value'
+  ],
+  'rules': {
+    'color-hex-length': 'short',
+    'color-named': 'never',
+    'color-no-invalid-hex': true,
+    'declaration-property-unit-whitelist': { 'line-height': [] },
+    'font-family-no-duplicate-names': true,
+    'number-leading-zero': 'always',
+    'number-max-precision': 2,
+    'number-no-trailing-zeros': true,
+    'string-no-newline': true,
+    'length-zero-no-unit': true,
+    'unit-case': 'lower',
+    'unit-no-unknown': true,
+    'value-keyword-case': 'lower',
+    'value-list-comma-newline-after': 'always-multi-line',
+    'value-list-comma-space-after': 'always-single-line',
+    'value-list-comma-space-before': 'never',
+    'value-list-max-empty-lines': 0,
+    'shorthand-property-no-redundant-values': true,
+    'property-case': 'lower',
+    'property-no-unknown': true,
+    'property-no-vendor-prefix': true,
+    'declaration-no-important': true,
+    'declaration-colon-space-after': 'always-single-line',
+    'declaration-colon-space-before': 'never',
+    'declaration-block-no-duplicate-properties': true,
+    'declaration-block-no-shorthand-property-overrides': true,
+    'declaration-block-semicolon-newline-after': 'always',
+    'declaration-block-semicolon-newline-before': 'never-multi-line',
+    'declaration-block-single-line-max-declarations': 1,
+    'declaration-block-trailing-semicolon': 'always',
+    'block-closing-brace-empty-line-before': 'never',
+    'block-closing-brace-newline-after': [
+      'always',
+      { 'ignoreAtRules': ['if', 'else'] }
+    ],
+    'block-closing-brace-newline-before': 'always-multi-line',
+    'block-no-empty': true,
+    'indentation': 2,
+    'max-empty-lines': 1,
+    'max-nesting-depth': 3,
+    'selector-list-comma-newline-after': 'always-multi-line',
+    'string-quotes': 'single',
+    'time-min-milliseconds': 200,
+    'order/order': [
+      'declarations',
+      'rules'
+    ],
+    'order/properties-order': [
+      'z-index',
+      'position',
+      'top',
+      'right',
+      'bottom',
+      'left',
+      'display',
+      'overflow',
+      'width',
+      'height',
+      'margin',
+      'padding',
+      'border',
+      'color',
+      'background',
+      'font-family',
+      'font-size',
+      'text-align'
+    ],
+    'scale-unlimited/declaration-strict-value': [
+      [
+        '/color/',
+        'font',
+        'font-family',
+        'font-size',
+        'z-index'
+      ],
+      {
+        ignoreKeywords: [
+          'currentColor',
+          'inherit',
+          'initial',
+          'transparent',
+          'auto'
+        ]
+      }
+    ]
   }
 }

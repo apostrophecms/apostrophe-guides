@@ -1,10 +1,10 @@
-const assert = require("assert");
+const assert = require('assert');
 
-const extensions = require("../lib/extensions");
+const extensions = require('../lib/extensions');
 
-describe("apostrophe-guides:extensions", function() {
-  it("should convert a font tag to html", function(done) {
-    const md = `[font family="Helvetica"]`;
+describe('apostrophe-guides:extensions', function() {
+  it('should convert a font tag to html', function(done) {
+    const md = '[font family="Helvetica"]';
 
     const expected = `<div class="apos-guide-font">
   <div class="apos-guide-font-example" style="font-family: Helvetica;">Helvetica</div>
@@ -19,8 +19,8 @@ describe("apostrophe-guides:extensions", function() {
     done();
   });
 
-  it("should convert a icon tag to html", function(done) {
-    const md = `[icon name="foo" src="/images/foo.svg"]`;
+  it('should convert a icon tag to html', function(done) {
+    const md = '[icon name="foo" src="/images/foo.svg"]';
 
     const expected = `<div class="apos-guide-icon">
   <div class="apos-guide-icon-example">
@@ -37,8 +37,8 @@ describe("apostrophe-guides:extensions", function() {
     done();
   });
 
-  it("should convert a swatch tag to html", function(done) {
-    const md = `[swatch name="red" hex="#F00"]`;
+  it('should convert a swatch tag to html', function(done) {
+    const md = '[swatch name="red" hex="#F00"]';
 
     const expected = `<div class="apos-guide-swatch">
   <div class="apos-guide-swatch-color" style="background-color: #F00"></div>
@@ -55,8 +55,8 @@ describe("apostrophe-guides:extensions", function() {
     done();
   });
 
-  it("should convert a rgb to hex", function(done) {
-    const md = `[swatch name="red" rgb="rgb(255,0,0)"]`;
+  it('should convert a rgb to hex', function(done) {
+    const md = '[swatch name="red" rgb="rgb(255,0,0)"]';
 
     const expected = `<div class="apos-guide-swatch">
   <div class="apos-guide-swatch-color" style="background-color: #FF0000"></div>
@@ -73,10 +73,10 @@ describe("apostrophe-guides:extensions", function() {
     done();
   });
 
-  it("should just return the string if no custom tags are found", function(done) {
-    const md = `font icon swatch foo bar baz`;
+  it('should just return the string if no custom tags are found', function(done) {
+    const md = 'font icon swatch foo bar baz';
 
-    const expected = `font icon swatch foo bar baz`;
+    const expected = 'font icon swatch foo bar baz';
 
     let actual = extensions.findFonts(md);
     actual = extensions.findIcons(actual);

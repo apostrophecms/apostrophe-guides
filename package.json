@@ -7,6 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
+    "lint": "npm run eslint & npm run stylelint",
+    "eslint": "eslint .",
+    "stylelint": "stylelint '**/*.less'",
     "test": "nyc --reporter=html npx mocha"
   },
   "keywords": [
@@ -44,6 +47,11 @@
     "lodash": "^4.17.15",
     "marked": "^1.1.0",
     "sanitize-html": "^1.26.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test"
+    }
   },
   "nyc": {
     "include": [

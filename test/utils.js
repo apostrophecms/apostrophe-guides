@@ -1,11 +1,11 @@
-const sinon = require("sinon");
-const assert = require("assert");
+const sinon = require('sinon');
+const assert = require('assert');
 
-const utils = require("../lib/utils");
+const utils = require('../lib/utils');
 
-describe("apostrophe-guides:utils", function() {
-  it("should stringify with formatting", function(done) {
-    const obj = { foo: "bar" };
+describe('apostrophe-guides:utils', function() {
+  it('should stringify with formatting', function(done) {
+    const obj = { foo: 'bar' };
 
     const expected = `{
     "foo": "bar"
@@ -17,22 +17,22 @@ describe("apostrophe-guides:utils", function() {
     done();
   });
 
-  it("should highlight a term", function(done) {
-    const str = "Hello World";
+  it('should highlight a term', function(done) {
+    const str = 'Hello World';
 
-    const expected = `<span class="apos-text-highlight">Hell</span>o World`;
+    const expected = '<span class="apos-text-highlight">Hell</span>o World';
     const actual = utils.highlight([[0, 3]], str, 4);
 
     assert.equal(expected, actual);
     done();
   });
 
-  it("should return an object of attributes", function(done) {
+  it('should return an object of attributes', function(done) {
     const attrs = ['foo="bar"', 'baz="qux"'];
 
     const expected = {
-      foo: "bar",
-      baz: "qux"
+      foo: 'bar',
+      baz: 'qux'
     };
 
     const actual = utils.addAttr(attrs);
@@ -41,38 +41,38 @@ describe("apostrophe-guides:utils", function() {
     done();
   });
 
-  it("should log an error", function(done) {
-    const spy = sinon.spy(console, "error");
+  it('should log an error', function(done) {
+    const spy = sinon.spy(console, 'error');
 
-    const expected = `Error: 'apostrophe-guides' \nfoo\n`;
+    const expected = 'Error: \'apostrophe-guides\' \nfoo\n';
 
-    utils.logError("foo");
+    utils.logError('foo');
 
     assert(spy.calledWith(expected));
     spy.restore();
     done();
   });
 
-  it("should set a section to active", function(done) {
+  it('should set a section to active', function(done) {
     const sections = [
       {
-        name: "Section",
-        docs: [{ name: "Page One" }, { name: "Page Two" }]
+        name: 'Section',
+        docs: [{ name: 'Page One' }, { name: 'Page Two' }]
       }
     ];
 
-    const page = { name: "Page One" };
+    const page = { name: 'Page One' };
 
     const expected = [
       {
-        name: "Section",
+        name: 'Section',
         docs: [
           {
-            name: "Page One",
+            name: 'Page One',
             active: true
           },
           {
-            name: "Page Two",
+            name: 'Page Two',
             active: false
           }
         ]

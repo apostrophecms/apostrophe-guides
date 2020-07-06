@@ -1,9 +1,9 @@
-const assert = require("assert");
+const assert = require('assert');
 
-const templates = require("../lib/templates");
+const templates = require('../lib/templates');
 
-describe("apostrophe-guides:templates", function() {
-  it("should render a font", function(done) {
+describe('apostrophe-guides:templates', function() {
+  it('should render a font', function(done) {
     const expected = `<div class="apos-guide-font">
   <div class="apos-guide-font-example" style="font-family: Helvetica, san-serif;font-weight: bold;font-size: 12px;">Aa</div>
   <div class="apos-guide-font-meta">
@@ -12,11 +12,11 @@ describe("apostrophe-guides:templates", function() {
 </div>`;
 
     const options = {
-      name: "Helvetica",
-      family: "Helvetica, san-serif",
-      weight: "bold",
-      size: "12px",
-      text: "Aa"
+      name: 'Helvetica',
+      family: 'Helvetica, san-serif',
+      weight: 'bold',
+      size: '12px',
+      text: 'Aa'
     };
 
     const actual = templates.font(options);
@@ -25,7 +25,7 @@ describe("apostrophe-guides:templates", function() {
     done();
   });
 
-  it("should render a font without a name", function(done) {
+  it('should render a font without a name', function(done) {
     const expected = `<div class="apos-guide-font">
   <div class="apos-guide-font-example" style="font-family: Helvetica, sans-serif;">Helvetica, sans-serif</div>
   <div class="apos-guide-font-meta">
@@ -34,7 +34,7 @@ describe("apostrophe-guides:templates", function() {
 </div>`;
 
     const options = {
-      family: "Helvetica, sans-serif"
+      family: 'Helvetica, sans-serif'
     };
 
     const actual = templates.font(options);
@@ -43,7 +43,7 @@ describe("apostrophe-guides:templates", function() {
     done();
   });
 
-  it("should render a icon", function(done) {
+  it('should render a icon', function(done) {
     const expected = `<div class="apos-guide-icon">
   <div class="apos-guide-icon-example">
     <img class="apos-guide-icon-image" src="/images/cart.svg">
@@ -54,8 +54,8 @@ describe("apostrophe-guides:templates", function() {
 </div>`;
 
     const options = {
-      name: "Cart",
-      src: "/images/cart.svg"
+      name: 'Cart',
+      src: '/images/cart.svg'
     };
 
     const actual = templates.icon(options);
@@ -64,7 +64,7 @@ describe("apostrophe-guides:templates", function() {
     done();
   });
 
-  it("should render a icon without a name", function(done) {
+  it('should render a icon without a name', function(done) {
     const expected = `<div class="apos-guide-icon">
   <div class="apos-guide-icon-example">
     <img class="apos-guide-icon-image" src="/images/cart.svg">
@@ -72,7 +72,7 @@ describe("apostrophe-guides:templates", function() {
 </div>`;
 
     const options = {
-      src: "/images/cart.svg"
+      src: '/images/cart.svg'
     };
 
     const actual = templates.icon(options);
@@ -81,7 +81,7 @@ describe("apostrophe-guides:templates", function() {
     done();
   });
 
-  it("should render a swatch", function(done) {
+  it('should render a swatch', function(done) {
     const expected = `<div class="apos-guide-swatch">
   <div class="apos-guide-swatch-color" style="background-color: #F00"></div>
   <div class="apos-guide-swatch-meta">
@@ -92,9 +92,9 @@ describe("apostrophe-guides:templates", function() {
 </div>`;
 
     const options = {
-      name: "$red",
-      hex: "#F00",
-      rgb: "rgb(221,238,255)"
+      name: '$red',
+      hex: '#F00',
+      rgb: 'rgb(221,238,255)'
     };
 
     const actual = templates.swatch(options);
