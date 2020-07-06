@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "npm run eslint & npm run stylelint",
     "eslint": "eslint .",
-    "stylelint": "stylelint '**/*.less'",
+    "stylelint": "stylelint 'public/**/*.less'",
     "test": "nyc --reporter=html npx mocha"
   },
   "keywords": [
@@ -23,30 +23,32 @@
   "author": "Apostrophe Technologies",
   "license": "MIT",
   "peerDependencies": {
-    "apostrophe": "^2.107.2"
+    "apostrophe": "^2.108.1"
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
-    "eslint-config-apostrophe": "^3.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-apostrophe": "^3.2.0",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
     "sinon": "^9.0.2",
-    "stylelint": "^13.6.0",
+    "stylelint": "^13.6.1",
+    "stylelint-declaration-strict-value": "^1.5.0",
     "stylelint-order": "^4.1.0"
   },
   "dependencies": {
     "color-convert": "^2.0.1",
-    "fuse.js": "^6.0.4",
+    "fuse.js": "^6.4.0",
     "glob": "^7.1.6",
-    "highlight.js": "^10.1.0",
+    "highlight.js": "^10.1.1",
     "lodash": "^4.17.15",
     "marked": "^1.1.0",
-    "sanitize-html": "^1.26.0"
+    "sanitize-html": "^1.27.0"
   },
   "husky": {
     "hooks": {
