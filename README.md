@@ -198,7 +198,7 @@ An example icon:
 
 #### Components
 
-To document your components, you can use a slightly modified version of the `code` block.
+To document your components, you can use a slightly modified version of the standard Markdown `code` block.
 
 ````md
 ```html button-simple.html
@@ -207,9 +207,11 @@ To document your components, you can use a slightly modified version of the `cod
 ```
 ````
 
-This should be identical to how you'd use your component in your templates. This could be `macro`, an `include`, or just plain old static html. The filename specified after the language will tell the module to generate a small html file that we can render inside an iframe on your documentation page. The iframe includes the `stylesheets`, `scripts`, and `demoBodyClass` you specified in the modules options. This is done to essentially sandbox your demo so that no guide styles or scripts pollute your example.
+This will do two things on your guide page. First, it will render a code block that shows how another developer exactly how they would implement your component. Secondly, it generates a html file that will be rendered in an iframe on the page. This provides a live working example of your component in a sandboxed environment right in your documentation. Just be sure to include the `.html` extension on your example file name.
 
-An example component:
+Your demo code could be a Nunjucks `macro`, a Nunjucks `include`, or even plain old static html. Be sure to configure the `stylesheets` and `scripts` options with the assets necessary to render your components. Additionally if you are scoping your css to a class on the body element, you can use the `demoBodyClass` option to include your class name on all component examples.
+
+An example of a component guide page:
 
 ![Apostrophe Guides Component](images/component.png)
 
@@ -217,8 +219,8 @@ _Note:_ Demos are rendered at the end of your documentation page by default. Thi
 
 ## Customizing Your Guide
 
-This module follows the standard Apostophe modular system so that means **everything** can be customized to your needs. If you're ok with the layout just want to maybe brand your guide the styles can be overwritten by a local css file in your module's `public/css` directory. A custom class is also applied to the guide based on the `title` option. This allows you to have multiple guides with multiple themes.
+This module follows the standard Apostrophe modular system so that means **everything** can be customized to your needs. If you're ok with the layout but maybe just want to maybe brand your guide, the styles can be overwritten by creating a  local `always.css` file in your `apostrophe-guides/public/css` directory. A custom class is also applied to a guide based on the `title` option. This allows you to have multiple guides with multiple themes in a single apostrophe instance.
 
-Additionally, you can modify any template by making a local copy of the template located in `node_modules/apostrophe-guides/views`.
+Additionally, you can modify any of the guide templates by coping the template you wish to modify from `node_modules/apostrophe-guides/views` to your project's `lib/modules/apostrophe-guides/views` directory.
 
 Happy documenting!
