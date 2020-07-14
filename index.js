@@ -5,9 +5,14 @@ module.exports = {
 
   afterConstruct: self => {
     self.addRoutes();
+    self.apos.on('csrfExceptions', self.addCsrfException);
   },
 
   construct: (self, options) => {
+    self.addCsrfException = exceptions => {
+      exceptions.push(`/${options.path}/**`);
+    };
+
     require('./lib/guide')(self, options);
 
     self.pushAsset('stylesheet', 'always', { when: 'always' });
