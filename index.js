@@ -10,7 +10,7 @@ module.exports = {
 
   construct: (self, options) => {
     self.addCsrfException = exceptions => {
-      exceptions.push(`/${options.path}/**`);
+      exceptions.push(`/${options.path}/search`);
     };
 
     require('./lib/guide')(self, options);
