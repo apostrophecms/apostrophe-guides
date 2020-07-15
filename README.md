@@ -219,7 +219,7 @@ _Note:_ Demos are rendered at the end of your documentation page by default. Thi
 
 ## Customizing Your Guide
 
-This module follows the standard Apostrophe modular system so that means **everything** can be customized to your needs. If you're ok with the layout but maybe just want to maybe brand your guide, the styles can be overwritten by creating a  local `always.css` file in your `apostrophe-guides/public/css` directory. A custom class is also applied to a guide based on the `title` option. This allows you to have multiple guides with multiple themes in a single apostrophe instance.
+This module follows the standard Apostrophe modular system so that means **everything** can be customized to your needs. If you're ok with the layout but maybe just want to maybe brand your guide, the styles can be overwritten by creating a local `always.css` file in your `apostrophe-guides/public/css` directory. A custom class is also applied to a guide based on the `title` option. This allows you to have multiple guides with multiple themes in a single apostrophe instance.
 
 Additionally, you can modify any of the guide templates by coping the template you wish to modify from `node_modules/apostrophe-guides/views` to your project's `lib/modules/apostrophe-guides/views` directory.
 
