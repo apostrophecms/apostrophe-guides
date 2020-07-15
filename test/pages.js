@@ -50,6 +50,7 @@ describe('apostrophe-guides:pages', function() {
           {
             demos: null,
             name: 'README',
+            filepath: `${__dirname}/docs/README.md`,
             url: '/guide/overview/readme',
             doc:
               '<h1 id="readme" class="apos-guide-heading">\n' +
@@ -85,6 +86,7 @@ describe('apostrophe-guides:pages', function() {
           {
             demos: null,
             name: 'README',
+            filepath: `${__dirname}/docs/README.md`,
             url: '/guide/overview/readme',
             doc:
               '<h1 id="readme" class="apos-guide-heading">\n' +
