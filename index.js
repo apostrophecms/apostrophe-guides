@@ -6,6 +6,7 @@ module.exports = {
   afterConstruct: self => {
     self.addRoutes();
     self.apos.on('csrfExceptions', self.addCsrfException);
+    self.pushAsset('script', 'guides', { when: 'always' });
   },
 
   construct: (self, options) => {
