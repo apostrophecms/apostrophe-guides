@@ -1,7 +1,8 @@
 {% macro render(options) %}
 <div class="apos-guide-example">
   <div class="apos-guide-demo">
-    <iframe data-apos-guides-iframe class="apos-guide-demo-iframe" src="/guide/{{ options.demo }}" frameborder="0"></iframe>
+    <!-- TODO: This needs the {{ options.path }} instead of a hardcoded /styleguide -->
+    <iframe data-apos-guides-iframe class="apos-guide-demo-iframe" src="{{ options.demo }}" frameborder="0"></iframe>
   </div>
 </div>
 {% endmacro %}
