@@ -13,13 +13,13 @@
   };
 
   function getHeight() {
-    return $iframe.contentWindow.document.body.offsetHeight;
+    return $iframe.contentWindow.document.body.scrollHeight;
   }
 
   function setHeight() {
-    $iframe.style = '';
+    $iframe.style.height = '';
     const height = getHeight();
-    $iframe.style = 'height:' + height + 'px';
+    $iframe.style.height = height + 'px';
   }
 
   function throttle(func, duration) {
