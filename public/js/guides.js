@@ -8,9 +8,9 @@
     setHeight();
   };
 
-  window.onresize = function() {
-    throttle(setHeight(), 50);
-  };
+  window.onresize = throttle(function() {
+    setHeight();
+  }, 50);
 
   function getHeight() {
     return $iframe.contentWindow.document.body.scrollHeight;
