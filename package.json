@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "lint": "npm run eslint & npm run stylelint",
+    "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint .",
     "stylelint": "stylelint 'public/**/*.less'",
     "test": "nyc --reporter=html npx mocha"
