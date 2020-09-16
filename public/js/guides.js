@@ -23,8 +23,8 @@
   }
 
   function throttle(func, duration) {
-    let shouldWait = false;
-    return function(...args) {
+    var shouldWait = false;
+    return function(args) {
       if (!shouldWait) {
         func.apply(this, args);
         shouldWait = true;
