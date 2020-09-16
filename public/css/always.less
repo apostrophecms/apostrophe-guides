@@ -16,7 +16,6 @@
 @font-family: 'Karla', sans-serif;
 @font-monospace: monospace;
 
-@font-size-small: 0.75rem;
 @font-size-reset: 1rem;
 @font-size-base: 1.6rem;
 
@@ -42,6 +41,7 @@ body {
   min-height: 100vh;
   background: @white;
   font-family: @font-family;
+  font-size: 16px; //stylelint-disable-line
 
   &-header {
     z-index: @z-index-header;
@@ -138,7 +138,7 @@ body {
     display: block;
     padding: 5px 25px;
     margin-bottom: 5px;
-    font-size: @font-size-small;
+    font-size: @font-size-reset;
     text-transform: uppercase;
     letter-spacing: 0.75px;
   }
@@ -175,7 +175,7 @@ body {
     margin-top: 50px;
     padding-top: 50px;
     border-top: 1px solid @light-gray;
-    font-size: @font-size-small;
+    font-size: @font-size-reset;
     text-align: center;
   }
 
@@ -242,7 +242,7 @@ body {
 
     thead th {
       color: @shuttle-gray;
-      font-size: @font-size-small;
+      font-size: @font-size-reset;
     }
 
     th {
