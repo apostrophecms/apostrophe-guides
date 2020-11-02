@@ -6,7 +6,7 @@
       <span class="apos-guide-section-name">{{ apos.utils.startCase(section.name) }}</span>
       <ul class="apos-guide-section-navigation">
       {% for item in section.docs %}
-        <li class="apos-guide-section-item"><a href="{{ item.url }}" class="apos-guide-link {{ 'apos-guide-is-active' if item.active }}">{{ item.name }}</a></li>
+        <li class="apos-guide-section-item"><a href="{{ apos.prefix if apos.prefix }}{{ item.url }}" class="apos-guide-link {{ 'apos-guide-is-active' if item.active }}">{{ item.name }}</a></li>
       {% endfor %}
       </ul>
     </li>
