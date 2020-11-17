@@ -1,5 +1,9 @@
 # Changelog
 
+## [ Unreleased ]
+
+- Update navigation items to support a site prefix.
+
 ## 1.0.1 (2020-09-17)
 
 - Switch LESS import to a link to fix a LESS compile error when assets are minified.
