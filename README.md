@@ -123,6 +123,16 @@ As a template:
 
 ```
 
+### permission
+
+- Required: `N`
+- Default: `guest`
+
+### permissionErrorMessage
+
+- Required: `N`
+- Default: `You must be logged in to view this page`
+
 ## Writing Documentation
 
 All documentation is written in Markdown with some added bonuses. Check [Markdown Guide](https://www.markdownguide.org/extended-syntax/) for a reference on how to write Markdown. In addition to the basics, you may also include [tables](https://www.markdownguide.org/extended-syntax/#tables) and [code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks).
