@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Add options for permission settings and permission error messages. Thanks @ngranahan
+
 ## 1.1.0 (2020-12-02)
 
 - Update navigation items to support a site prefix.
@@ -13,3 +17,7 @@
 ## 1.0.0 (2020-07-29)
 
 Initial Release
+
+[Unreleased]: https://github.com/apostrophecms/apostrophe-guides/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/apostrophecms/apostrophe-guides/compare/1.0.0...1.1.0
+[1.0.0]: https://github.com/apostrophecms/apostrophe-guides/releases/tag/1.0.0
