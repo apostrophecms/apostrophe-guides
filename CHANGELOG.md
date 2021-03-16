@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Add options for permission settings and permission error messages. Thanks @ngranahan
+- Add options for permission settings and permission error messages. Thanks @ngranahan of P'unk Avenue
 
 ## 1.1.0 (2020-12-02)
 
