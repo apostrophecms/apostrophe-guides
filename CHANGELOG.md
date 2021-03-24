@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased
+## 1.2.0 (2021-03-24)
 
-- Add options for permission settings and permission error messages. Thanks @ngranahan of P'unk Avenue
+- Add options for permission settings and permission error messages. Thanks [Nora Granahan](https://github.com/ngranahan) of P'unk Avenue
 
 ## 1.1.0 (2020-12-02)
 
