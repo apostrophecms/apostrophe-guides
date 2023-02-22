@@ -1,5 +1,9 @@
 # Changelog
 
+## UNRELEASED
+
+- Removes `apostrophe` as a peer dependency.
+
 ## 1.2.0 (2021-03-24)
 
 - Add options for permission settings and permission error messages. Thanks [Nora Granahan](https://github.com/ngranahan) of P'unk Avenue

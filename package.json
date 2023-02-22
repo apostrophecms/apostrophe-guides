@@ -22,9 +22,6 @@
   },
   "author": "Apostrophe Technologies",
   "license": "MIT",
-  "peerDependencies": {
-    "apostrophe": "^2.108.1"
-  },
   "devDependencies": {
     "apostrophe": "^2.116.1",
     "eslint": "^7.4.0",
