@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-guides",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Build guides to document your Apostrophe site.",
   "main": "index.js",
   "directories": {
